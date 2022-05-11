@@ -1,4 +1,4 @@
-# BOTSTYLEE-MD
+# BAYMAX-MD
 <a href="https://github.com/botstylee/botstylee/network/members"><img title="Forks" src="https://img.shields.io/github/forks/botstylee/botstylee?label=Forks&color=blue&style=flat-square"></a>
 <a href="https://github.com/botstylee/botstylee/watchers"><img title="Watchers" src="https://img.shields.io/github/watchers/botstylee/botstylee?label=Watchers&color=green&style=flat-square"></a>
 <a href="https://github.com/botstylee/botstylee/stargazers"><img title="Stars" src="https://img.shields.io/github/stars/botstylee/botstylee?label=Stars&color=yellow&style=flat-square"></a>
@@ -16,8 +16,8 @@
 ```bash
 > pkg update && pkg upgrade
 > pkg install git ffmpeg imagemagick nodejs nano mc -y
-> git clone https://github.com/botstylee/botstylee
-> cd botstylee
+> git clone https://github.com/Toshiro223/Baymax
+> cd Baymax
 > npm install -g npm@6.14.14 && npm install
 ```
 ###### Run
