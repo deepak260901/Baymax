@@ -38,17 +38,19 @@ const defaultMenu = {
 	before: `
 
 🍁 Kon'nichiwa, %name! ogenkideuska I am %me 🍁
+
+Hey I'm Kurumi deuska A Fully Fledged WhatsApp Bot Based On Multi-device Baileys And Written In Javascript By Toshiro :)
  
 🌟𝐌𝐲 𝐔𝐬𝐚𝐛𝐥𝐞 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐀𝐫𝐞 𝐋𝐢𝐬𝐭𝐞𝐝 𝐁𝐞𝐥𝐨𝐰🌟
 
 ════════════════════════ 
-  Limit : *%limit Limit*
-  Role : *%role*
-  Level : *%level (%exp / %maxexp)*
-  Total XP : %totalexp 
-  Date: *%week, %date*
-  Waktu: *%time*
-  Uptime: *%uptime (%muptime)*
+ Limit : *%limit Limit*
+ Role : *%role*
+ Level : *%level (%exp / %maxexp)*
+ Total XP : %totalexp 
+ Date: *%week, %date*
+ Waktu: *%time*
+ Uptime: *%uptime (%muptime)*
 ════════════════════════ 
 🎐 ᗰY ᑕOᗰᗰᗩᑎᗪ ᒪIՏT 🎐
 %readmore`.trimStart(),
