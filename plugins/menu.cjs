@@ -37,7 +37,7 @@ let tags = {
 const defaultMenu = {
 	before: `
 
- 🍁 Kon'nichiwa, %name! ogenkideuska I am %me 🍁
+🍁 Kon'nichiwa, %name! ogenkideuska I am %me 🍁
  
 🌟𝐌𝐲 𝐔𝐬𝐚𝐛𝐥𝐞 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐀𝐫𝐞 𝐋𝐢𝐬𝐭𝐞𝐝 𝐁𝐞𝐥𝐨𝐰🌟
 
