@@ -373,50 +373,50 @@ export async function handler(chatUpdate) {
 				}
 			}
 		}
-		if (!m.fromMe && m.text.match(/(makasi|thanks|thank|terima kasih|tq|suwon)/gi)) {
-			conn.reply(m.chat, "hooh😅👆", false)
+		if (!m.fromMe && m.text.match(/(makasi|thanks|thank|thank you|tq|suwon)/gi)) {
+			conn.reply(m.chat, "hehe😗", false)
 		}
 		if (enable.reminder && m.isGroup && isAdmin) {
 			let subuh = new schedule.RecurrenceRule();
-			subuh.tz = 'Asia/Jakarta';
+			subuh.tz = 'Asia/Kolkata';
 			subuh.second = 2;
 			subuh.minute = 12;
 			subuh.hour = 4;
 			let zuhur = new schedule.RecurrenceRule();
-			zuhur.tz = 'Asia/Jakarta';
+			zuhur.tz = 'Asia/Kolkata';
 			zuhur.second = 5;
 			zuhur.minute = 29;
 			zuhur.hour = 11;
 			let asar = new schedule.RecurrenceRule();
-			asar.tz = 'Asia/Jakarta';
+			asar.tz = 'Asia/Kolkata';
 			asar.second = 6;
 			asar.minute = 48;
 			asar.hour = 14;
 			let maghrib = new schedule.RecurrenceRule();
-			maghrib.tz = 'Asia/Jakarta';
+			maghrib.tz = 'Asia/Kolkata';
 			maghrib.second = 7;
 			maghrib.minute = 27;
 			maghrib.hour = 17;
 			let isya = new schedule.RecurrenceRule();
-			isya.tz = 'Asia/Jakarta';
+			isya.tz = 'Asia/Kolkata';
 			isya.second = 8;
 			isya.minute = 37;
 			isya.hour = 18;
                         let sahur = new schedule.RecurrenceRule();
-                        sahur.tz = 'Asia/Jakarta';
+                        sahur.tz = 'Asia/Kolkata';
                         sahur.second = 2;
                         sahur.minute = 3;
                         sahur.hour = 3;
                         let buka = new schedule.RecurrenceRule();
-                        buka.tz = 'Asia/Jakarta';
+                        buka.tz = 'Asia/Kolkata';
                         buka.second = 7;
                         buka.minute = 59;
                         buka.hour = 17;
 			schedule.scheduleJob(sahur, () => {
-				conn.reply(m.chat, `Telah Masuk Waktu sahur ayok kita sahur dulu sayang\njangan lupa untuk sholat subuh ya sayang\nPukul: ${new Date().getHours()+ " : " + new Date().getMinutes()}\n             *BOTSTYLE*`, false)
+				conn.reply(m.chat, `It's time for brakefast, let's have breakfast first dear\ndon't forget to pray at dawn, dear\nO clock: ${new Date().getHours()+ " : " + new Date().getMinutes()}\n             *KURUMI*`, false)
 			});
 		        schedule.scheduleJob(buka, () => {
-				conn.reply(m.chat, `Telah Masuk Waktu untuk berbuka puasa bagi yang sedang menjalankan puasa\njangan lupa untuk sholat tarawih ya sayang\nPukul ${new Date().getHours()+ " : " + new Date().getMinutes()}\n             *BOTSTYLE*`, false)
+				conn.reply(m.chat, `Telah Masuk Waktu untuk berbuka puasa bagi yang sedang menjalankan puasa\njangan lupa untuk sholat tarawih ya sayang\nPukul ${new Date().getHours()+ " : " + new Date().getMinutes()}\n             *KURUMI*`, false)
 			});
 			schedule.scheduleJob(subuh, () => {
 				conn.reply(m.chat, `Telah Masuk Waktu sholat Subuh\nUntuk Daerah Pasuruan dan sekitarnya\nPukul: ${new Date().getHours()+ " : " + new Date().getMinutes()}\n             *ANTI-BOT*`, false)
@@ -772,9 +772,9 @@ export async function deleteUpdate(message) {
 		if (chat.delete)
 			return console.log(msg.message)
 		/*await this.reply(msg.chat, `
-Terdeteksi @${participant.split`@`[0]} telah menghapus pesan
-Untuk mematikan fitur ini, ketik
-*.enable delete*
+Detected @${participant.split`@`[0]} deleted message
+To turn off this feature, type
+*.desable delete*
 `.trim(), msg, {
             mentions: [participant]
         })
