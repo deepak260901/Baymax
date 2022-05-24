@@ -10,7 +10,7 @@ let handler = async (m, {
 	} [(args[0] || '')]
 	if (isClose === undefined)
 		throw `
-*Format salah! Contoh :*
+*Wrong format! Example :*
   *○ ${usedPrefix + command} close*
   *○ ${usedPrefix + command} open*
 `.trim()
