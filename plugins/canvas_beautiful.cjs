@@ -4,16 +4,16 @@ const { sticker } = require('../lib/sticker.cjs')
 const { MessageType } = require('@adiwajshing/baileys')
 
 let handler = async (m, { conn, text }) => {
-   if (!text && m.mentionedJid.length == 0) return m.reply('Tag member cewek yang ada pp kak, contoh *#beautiful @member*')
+   if (!text && m.mentionedJid.length == 0) return m.reply('Tag a member, for example *#beautiful @Toshiro*')
 try {
 a = await conn.getProfilePicture(m.mentionedJid[0])
 b = await require('node-fetch')(a).then(v => v.buffer())
 c = await uploadImage(b).catch(e => uploadFile(b))
 d = await (await fetch('https://tessyy-api.herokuapp.com/canvas/bautiful?url='+encodeURIComponent(c) )).buffer()
   m.reply('_Tunggu Sebentar. . ._')
-  conn.sendFile(m.chat, d, 'image.png' , 'cakep bener lu', m)
+  conn.sendFile(m.chat, d, 'image.png' , 'you're really cute', m)
  } catch (e) {
-   m.reply('Error || Mungkin foto profile orang tersebut depresi!')
+   m.reply('Error || Maybe the profile picture of the person is depressed!')
   }
 }
 handler.help = ['beautiful (@tag)']
