@@ -24,14 +24,14 @@ ${item.map(v => `${rpg.emoticon(v)}${v}`.trim()).join('\n')}
 	if (!item.includes(type)) return m.reply(lol)
 	const count = Math.min(Number.MAX_SAFE_INTEGER, Math.max(1, (isNumber(args[1]) ? parseInt(args[1]) : 1))) * 1
 	let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : args[2] ? (args[2].replace(/[@ .+-]/g, '') + '@s.whatsapp.net') : ''
-	if (!who) return m.reply('Tag salah satu, atau ketik Nomernya!!')
+	if (!who) return m.reply('Tag one, or type the number!!')
 	if (!(who in global.db.data.users)) return m.reply(`User ${who} not in database`)
 	if (user[type] * 1 < count) return m.reply(`Your *${rpg.emoticon(type)}${type}${special(type)}* is less *${count - user[type]}*`)
 	let confirm = `
 Are you sure you want to transfer *${count}* ${rpg.emoticon(type)}${type}${special(type)} to *@${(who || '').replace(/@s\.whatsapp\.net/g, '')}*
-Timeout *60* detik
+Timeout *60* second
 `.trim()
-	let c = '©games-wabot'
+	let c = '©BayMax'
 	conn.sendButton(m.chat, confirm, c, null, [
 		['y'],
 		['n']
@@ -88,11 +88,11 @@ handler.before = async m => {
 	}
 }
 
-handler.help = ['transfer', 'tf'].map(v => v + ' [type] [jumlah] [@tag]')
+handler.help = ['transfer', 'tf'].map(v => v + ' [type] [total] [@tag]')
 handler.tags = ['rpg']
 handler.command = /^(transfer|tf)$/i
 
-handler.disabled = false
+handler.disabled = false 
 
 module.exports = handler
 
